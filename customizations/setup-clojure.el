@@ -52,6 +52,11 @@
 (setup cider-repl-mode
   (:hook paredit-mode))
 
+;;GF 20230422 disable ret mode for paredit 
+;;to get the repl working as expected
+(define-key paredit-mode-map (kbd "RET") nil)
+
+
 ;; Use clojure mode for other extensions
 (add-to-list 'auto-mode-alist '("\\.boot$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\\.cljs.*$" . clojure-mode))

@@ -23,6 +23,12 @@
 ;; increase font size for better readability
 (set-face-attribute 'default nil :height 140)
 
+;; GF 20230422 select font for windows
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-14" ))
+(set-face-attribute 'default t :font "DejaVu Sans Mono-14" )
+
+
+
 ;; on a Mac, don't pop up font menu
 (when (string-equal system-type "darwin") 'ok
   (global-set-key (kbd "s-t") '(lambda () (interactive))))
