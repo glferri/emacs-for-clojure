@@ -17,15 +17,15 @@
 (setq-default frame-title-format "%b (%f)")
 
 ;; initial frame height and width
-(add-to-list 'default-frame-alist '(height . 45))
-(add-to-list 'default-frame-alist '(width . 100))
+(add-to-list 'default-frame-alist '(height . 40))
+(add-to-list 'default-frame-alist '(width . 140))
 
 ;; increase font size for better readability
-(set-face-attribute 'default nil :height 140)
+(set-face-attribute 'default nil :height 120)
 
 ;; GF 20230422 select font for windows
-(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-14" ))
-(set-face-attribute 'default t :font "DejaVu Sans Mono-14" )
+(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-12" ))
+(set-face-attribute 'default t :font "DejaVu Sans Mono-12" )
 
 
 
