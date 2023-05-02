@@ -29,6 +29,7 @@
 
 
 
+
 ;; on a Mac, don't pop up font menu
 (when (string-equal system-type "darwin") 'ok
   (global-set-key (kbd "s-t") '(lambda () (interactive))))
@@ -85,4 +86,16 @@
 ;; on your system before you specify it here,
 ;; Some font suggestions:  https://www.creativebloq.com/features/the-best-monospace-fonts-for-coding
 ;; (set-face-attribute 'default nil :font "Fira Code")
+
+;;GF enable Ripgrep
+(rg-enable-default-bindings)
+;; If you prefer to use a magit like interface as a complement to regular key maps, 
+;; replace (rg-enable-default-bindings) with (rg-enable-menu). 
+;;(rg-enable-menu)
+
+;;GF enable recentf
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(setq recentf-max-saved-items 25)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
 

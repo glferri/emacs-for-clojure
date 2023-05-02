@@ -33,7 +33,8 @@
     "elisp-editing.el"
     "setup-clojure.el"
     "setup-js.el"
-    "shell-integration.el"))
+    "shell-integration.el"
+    "setup-org.el"))
 
 (dolist (x addons)
   (load x))
