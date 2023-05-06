@@ -31,3 +31,31 @@
 ;; see screenshots: https://github.com/Yevgnen/ivy-rich/blob/master/screenshots.org
 (setup (:package ivy-rich)
   (ivy-rich-mode))
+
+
+;;GF enable Ripgrep
+(rg-enable-default-bindings)
+;; If you prefer to use a magit like interface as a complement to regular key maps, 
+;; replace (rg-enable-default-bindings) with (rg-enable-menu). 
+;;(rg-enable-menu)
+
+;;GF enable recentf
+(recentf-mode 1)
+(setq recentf-max-menu-items 25)
+(setq recentf-max-saved-items 25)
+(global-set-key "\C-x\ \C-r" 'recentf-open-files)
+
+;;GF use ibuffer in order to easily kill lots of buffers
+;; https://stackoverflow.com/questions/3417438/close-all-buffers-besides-the-current-one-in-emacs
+;; Ensure ibuffer opens with point at the current buffer's entry.
+;; (defadvice ibuffer
+;;   (around ibuffer-point-to-most-recent) ()
+;;   "Open ibuffer with cursor pointed to most recent buffer name."
+;;   (let ((recent-buffer-name (buffer-name)))
+;;     ad-do-it
+;;     (ibuffer-jump-to-buffer recent-buffer-name)))
+;; (ad-activate 'ibuffer)
+
+;; (global-set-key (kbd "C-x C-b")  'ibuffer)
+
+
