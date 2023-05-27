@@ -44,6 +44,9 @@
 (setq recentf-max-menu-items 25)
 (setq recentf-max-saved-items 25)
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
+;;GF save recent files every
+(run-with-timer 0 (* 10 60) 'recentf-save-list)
+
 
 ;;GF use ibuffer in order to easily kill lots of buffers
 ;; https://stackoverflow.com/questions/3417438/close-all-buffers-besides-the-current-one-in-emacs
