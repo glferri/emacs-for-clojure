@@ -32,9 +32,14 @@
 (setup (:package ivy-rich)
   (ivy-rich-mode))
 
+;; GF 20230721 this should show me the last used m-x commands
+(setup (:package smex)
+  (smex-initialize))
+
 
 ;;GF enable Ripgrep
-(rg-enable-default-bindings)
+(setup  (:package ripgrep)
+  (rg-enable-default-bindings))
 ;; If you prefer to use a magit like interface as a complement to regular key maps, 
 ;; replace (rg-enable-default-bindings) with (rg-enable-menu). 
 ;;(rg-enable-menu)
