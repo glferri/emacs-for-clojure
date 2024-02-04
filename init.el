@@ -35,7 +35,8 @@
     "setup-clojure.el"
     "setup-js.el"
     "shell-integration.el"
-    "setup-org.el"))
+    "setup-org.el"
+    "spell-checkers.el"))
 
 (dolist (x addons)
   (load x))
@@ -45,3 +46,5 @@
 
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file 'noerror)
+
+(setq default-directory "C:/Users/gferri/Documents")
