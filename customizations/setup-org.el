@@ -1,7 +1,16 @@
-;;(require 'org)
+;;; Org configuration
+
+(require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
+
+
+;; org agenda files (get todos from all my org files recursively)
+(setq org-agenda-files (directory-files-recursively "C:/Users/gferri/Documents/org-files/" "\\.org$"))
+
+
+
 
 ;;following https://hugocisneros.com/org-config/
 
@@ -13,10 +22,17 @@
 ;; cannot set done if children are not done
 (setq-default org-enforce-todo-dependencies t)
 
+;; show TODOs in different colors based on priority
+(setq org-priority-faces '((?A . (:foreground "#ff4444" :weight 'bold))
+                           (?B . (:foreground "#dddd44"))
+                           (?C . (:foreground "#44cc44"))))
+
+
 ;;setup superstar
 ;;; Titles and Sections
 ;; hide #+TITLE:
 (setq org-hidden-keywords '(title))
+
 
 (with-eval-after-load 'org-faces 
   ;; set basic title font
@@ -66,3 +82,5 @@
  'org-babel-load-languages
  '((R . t)
    (latex . t)))
+
+
