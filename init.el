@@ -7,6 +7,12 @@
                          ("elpa" . "https://elpa.gnu.org/packages/")))
 (package-initialize)
 
+
+;;set default directory system independent
+;;TODO: see if there's a similar way to coalesce
+(setq default-directory (if (eq nil (getenv "USERPROFILE")) "~"
+			  (concat  (string-replace "\\" "/" (getenv "USERPROFILE"))  "/Documents/")))
+
 ;; setup.el provides a macro for configuration patterns
 ;; it makes package installation and config nice and tidy!
 ;; https://www.emacswiki.org/emacs/SetupEl
@@ -47,4 +53,5 @@
 (setq custom-file (concat user-emacs-directory "custom.el"))
 (load custom-file 'noerror)
 
-(setq default-directory "C:/Users/gferri/Documents")
+
+
