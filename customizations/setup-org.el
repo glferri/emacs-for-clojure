@@ -7,7 +7,7 @@
 
 
 ;; org agenda files (get todos from all my org files recursively)
-(setq org-agenda-files (directory-files-recursively (concat default-directory "/org-files/") "\\.org$"))
+(setq org-agenda-files (directory-files-recursively (concat custom-user-doc-directory "/org-files/") "\\.org$"))
 
 
 
