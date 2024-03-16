@@ -17,3 +17,7 @@ archive-contents
 recentf
 transient
 network-security.data
+ac-comphist.dat
+org-roam.db
+server/
+smex-items
