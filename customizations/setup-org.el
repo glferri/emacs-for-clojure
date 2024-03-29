@@ -6,8 +6,12 @@
 (setq org-log-done t)
 
 
+;; default org directory
+(setq org-directory (concat custom-user-doc-directory "/org-files/"))
+
 ;; org agenda files (get todos from all my org files recursively)
-(setq org-agenda-files (directory-files-recursively (concat custom-user-doc-directory "/org-files/") "\\.org$"))
+(setq org-agenda-files (directory-files-recursively org-directory "\\.org$"))
+
 
 
 
