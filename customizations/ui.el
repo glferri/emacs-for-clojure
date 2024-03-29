@@ -24,8 +24,8 @@
 (set-face-attribute 'default nil :height 120)
 
 ;; GF 20230422 select font for windows
-(add-to-list 'default-frame-alist '(font . "DejaVu Sans Mono-12" ))
-(set-face-attribute 'default t :font "DejaVu Sans Mono-12" )
+(add-to-list 'default-frame-alist '(font . "FiraCode Nerd Font Mono-12" ))
+(set-face-attribute 'default t :font "FiraCode Nerd Font Mono-12" )
 
 
 

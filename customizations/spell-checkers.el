@@ -3,6 +3,8 @@
 ;better put msys bin dir in path
 ;(add-to-list 'exec-path "C:/Users/gferri/scoop/apps/msys2/current/usr/bin/")
 (setq ispell-program-name "aspell")
+(setq ispell-list-command "list")
+
 ;; enable flyspell
 (dolist (hook '(text-mode-hook))
   (add-hook hook (lambda () (flyspell-mode 1))))
